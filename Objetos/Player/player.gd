@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var morrendo = false
+@onready var camera_man = get_node("../CameraMan")
 
 
 func _physics_process(delta: float) -> void:
@@ -18,12 +19,12 @@ func _physics_process(delta: float) -> void:
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
-		#var direction := Input.get_axis("ui_left", "ui_right")
-		#if direction:
-		#	velocity.x = direction * SPEED
-		#else:
-		#	velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.x  = SPEED
+		var direction := Input.get_axis("ui_left", "ui_right")
+		if direction:
+			velocity.x = (direction * 200) + SPEED
+		else:
+			velocity.x = SPEED
+		
 
 		#Criar as condicionais de animação do jogador
 		#Se a velocidade vertical(y) for negativa deve rodar a animação jump
@@ -39,10 +40,14 @@ func _physics_process(delta: float) -> void:
 		
 		#Ajustar limite inferior da câmera para 670
 		#Ajustar posição horizontal (offset) para 400
-		if position.y >= 670:
+		
+		if position.y >= 670 or camera_man.position.x > position.x :
 			morrendo = true
+			camera_man.SPEED = 0
 			
 	if morrendo == true:
+		
+		
 		velocity.x = 0
 		
 		if position.y >= 400:

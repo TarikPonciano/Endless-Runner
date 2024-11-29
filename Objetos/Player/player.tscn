@@ -178,7 +178,3 @@ shape = SubResource("CapsuleShape2D_6fsbk")
 sprite_frames = SubResource("SpriteFrames_gidmr")
 animation = &"Explode"
 autoplay = "Idle"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(400, 0)
-limit_bottom = 670

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cejxhp7iy6hvv"]
+[gd_scene load_steps=7 format=3 uid="uid://cejxhp7iy6hvv"]
 
 [ext_resource type="Script" path="res://fases.gd" id="1_70rtp"]
 [ext_resource type="PackedScene" uid="uid://dxmf2t1xjo3nf" path="res://Objetos/Player/player.tscn" id="2_er4s8"]
 [ext_resource type="PackedScene" uid="uid://cn7fptymeyys4" path="res://BG/Jungle/jungle_bg2.tscn" id="3_8hohk"]
 [ext_resource type="PackedScene" uid="uid://mkqkld267lih" path="res://Fases/fase1.tscn" id="3_nvg7v"]
 [ext_resource type="PackedScene" uid="uid://wmdba7bvov40" path="res://UI.tscn" id="5_quok8"]
+[ext_resource type="PackedScene" uid="uid://cl4xbetnpjkkc" path="res://Objetos/CameraMan/CameraMan.tscn" id="6_a56qq"]
 
 [node name="Main" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [656.0, 656.0]
@@ -19,15 +20,13 @@ position = Vector2(176, 568)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("3_8hohk")]
 
-[node name="TimerCriarBlocos" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
-
 [node name="CanvasLayer" parent="." instance=ExtResource("5_quok8")]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.1
 autostart = true
 
-[connection signal="timeout" from="TimerCriarBlocos" to="Fases" method="_on_timer_criar_blocos_timeout"]
+[node name="CameraMan" parent="." instance=ExtResource("6_a56qq")]
+position = Vector2(0, 328)
+
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]

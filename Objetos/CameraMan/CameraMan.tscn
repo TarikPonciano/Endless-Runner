@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl4xbetnpjkkc"]
+
+[ext_resource type="Script" path="res://Objetos/CameraMan/camera_man.gd" id="1_qymqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxeuf"]
+size = Vector2(13, 7)
+
+[node name="CameraMan" type="CharacterBody2D"]
+script = ExtResource("1_qymqf")
+metadata/_edit_vertical_guides_ = [-576.0]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rxeuf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(576, 0)
