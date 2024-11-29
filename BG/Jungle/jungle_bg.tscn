@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd8pitr30jdui"]
+
+[ext_resource type="Texture2D" uid="uid://btfj0itdsebre" path="res://BG/Jungle/back.png" id="1_xero5"]
+[ext_resource type="Texture2D" uid="uid://btbv8pl7iw7xd" path="res://BG/Jungle/middle-a.png" id="2_ul7qs"]
+
+[node name="Jungle_bg" type="ParallaxBackground"]
+metadata/_edit_vertical_guides_ = [1008.0, 1344.0, 2016.0]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1344, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(168, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("1_xero5")
+
+[node name="Back4" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(1176, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("1_xero5")
+
+[node name="Back2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(840, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("1_xero5")
+
+[node name="Back3" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(504, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("1_xero5")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(2016, 0)
+
+[node name="Middle-a" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(504, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("2_ul7qs")
+
+[node name="Middle-a2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1512, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("2_ul7qs")

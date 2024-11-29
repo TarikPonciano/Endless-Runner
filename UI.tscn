@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://wmdba7bvov40"]
+
+[ext_resource type="Script" path="res://label.gd" id="1_t72h2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_28qah"]
+font_size = 48
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 312.0
+offset_right = 585.0
+offset_bottom = 67.0
+text = "Pontuação: "
+label_settings = SubResource("LabelSettings_28qah")
+script = ExtResource("1_t72h2")
