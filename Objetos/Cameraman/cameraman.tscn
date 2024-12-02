@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://k43ioao2d10k"]
+
+[ext_resource type="Script" path="res://Objetos/Cameraman/cameraman.gd" id="1_kmhyn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ljnch"]
+radius = 0.0
+
+[node name="Cameraman" type="CharacterBody2D"]
+script = ExtResource("1_kmhyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ljnch")
+
+[node name="Camera2D" type="Camera2D" parent="."]
