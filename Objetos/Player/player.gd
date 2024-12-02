@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+var SPEED = Global.velocidade_global
 const JUMP_VELOCITY = -400.0
 var morrendo = false
 
@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		#	velocity.x = direction * SPEED
 		#else:
 		#	velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.x  = SPEED
+		velocity.x  = Global.velocidade_global
 
 		#Criar as condicionais de animação do jogador
 		#Se a velocidade vertical(y) for negativa deve rodar a animação jump
@@ -39,11 +39,19 @@ func _physics_process(delta: float) -> void:
 		
 		#Ajustar limite inferior da câmera para 670
 		#Ajustar posição horizontal (offset) para 400
+		var cameraman = get_node("../Cameraman")
+		if cameraman != null:
+			var distancia = cameraman.position.x - position.x
+			if distancia>= 560:
+				morrendo = true
+				
+			
 		if position.y >= 670:
 			morrendo = true
 			
 	if morrendo == true:
-		velocity.x = 0
+		Global.velocidade_global = 0
+		velocity.x = Global.velocidade_global
 		
 		if position.y >= 400:
 			velocity.y = -300

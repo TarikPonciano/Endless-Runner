@@ -1,13 +1,12 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+var SPEED = Global.velocidade_global
 
 
 func _physics_process(delta: float) -> void:
 
 	
-	velocity.x = SPEED
+	velocity.x = Global.velocidade_global
 	
-
 	move_and_slide()
