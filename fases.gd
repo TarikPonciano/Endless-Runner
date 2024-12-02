@@ -6,10 +6,20 @@ var fase2 = preload("res://Fases/fase2.tscn")
 var fase3 = preload("res://Fases/fase3.tscn")
 var fase4 = preload("res://Fases/fase4.tscn")
 var rng = RandomNumberGenerator.new()
-
 var contador = 1
 
-func _on_timer_criar_blocos_timeout() -> void:
+func _process(delta: float) -> void:
+	#Lembrar de remover o timer
+	#Lembrar de renomear a função on_timer_timeout.... para criar_bloco
+	#Usar a posição do jogador como gatilho para rodar a função criar_bloco
+	var jogador = get_node("../Player")
+	if (jogador != null):
+		if (jogador.position.x > 176 + (1344*(contador-1))):
+			criar_bloco()
+	
+	
+
+func criar_bloco ()-> void:
 	""" Lógica alternativa
 	if (contador % 4) == 1:
 		fase_temp = fase1.instantiate()

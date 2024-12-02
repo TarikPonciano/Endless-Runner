@@ -8,6 +8,7 @@
 
 [node name="Main" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [656.0, 656.0]
+metadata/_edit_vertical_guides_ = [176.0]
 
 [node name="Fases" type="Node2D" parent="."]
 script = ExtResource("1_70rtp")
@@ -19,15 +20,10 @@ position = Vector2(176, 568)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("3_8hohk")]
 
-[node name="TimerCriarBlocos" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
-
-[node name="CanvasLayer" parent="." instance=ExtResource("5_quok8")]
+[node name="UI" parent="." instance=ExtResource("5_quok8")]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 autostart = true
 
-[connection signal="timeout" from="TimerCriarBlocos" to="Fases" method="_on_timer_criar_blocos_timeout"]
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
