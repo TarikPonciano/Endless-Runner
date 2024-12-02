@@ -23,7 +23,13 @@ func _physics_process(delta: float) -> void:
 		#	velocity.x = direction * SPEED
 		#else:
 		#	velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.x  = Global.velocidade_global
+		var direction := Input.get_axis("ui_left", "ui_right")
+		if direction == 1:
+			velocity.x = Global.velocidade_global * 2
+		elif direction == -1:
+			velocity.x = -100
+		else:
+			velocity.x  = Global.velocidade_global
 
 		#Criar as condicionais de animação do jogador
 		#Se a velocidade vertical(y) for negativa deve rodar a animação jump
@@ -68,4 +74,6 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	Global.pontuacao = round(position.x/5) # Replace with function body.
+	var novo_score = round(position.x/5)
+	if  novo_score > Global.pontuacao:
+		Global.pontuacao = novo_score # Replace with function body.
