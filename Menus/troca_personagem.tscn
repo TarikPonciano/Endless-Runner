@@ -74,6 +74,7 @@ text = "ENDLESS RUNNER"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 296.0
 offset_top = 176.0
 offset_right = 864.0

@@ -176,5 +176,5 @@ shape = SubResource("CapsuleShape2D_6fsbk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gidmr")
-animation = &"Explode"
+animation = &"Run"
 autoplay = "Idle"

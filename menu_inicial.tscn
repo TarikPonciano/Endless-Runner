@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cbsr7tg0hgor6"]
 
-[ext_resource type="Script" path="res://Menus/menu_inicial.gd" id="1_lqbyo"]
+[ext_resource type="Script" path="res://Menus/menu_inicial.gd" id="1_iapo4"]
 [ext_resource type="FontFile" uid="uid://csd8h5ugta7bj" path="res://SuperPixel-m2L8j.ttf" id="2_u3d7x"]
 
 [sub_resource type="Theme" id="Theme_intw5"]
@@ -13,7 +13,7 @@ Label/styles/normal = null
 bg_color = Color(0.6, 0.282353, 0.0980392, 1)
 
 [node name="MenuInicial" type="Node2D"]
-script = ExtResource("1_lqbyo")
+script = ExtResource("1_iapo4")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1152.0

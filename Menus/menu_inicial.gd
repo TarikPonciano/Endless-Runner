@@ -13,17 +13,17 @@ func _process(delta: float) -> void:
 
 func _on_fácil_pressed() -> void:
 	Global.velocidade_global = 200
-	get_tree().change_scene_to_file("res://troca_personagem.tscn")
+	get_tree().change_scene_to_file("res://Menus/troca_personagem.tscn")
 
 
 func _on_médio_pressed() -> void:
 	Global.velocidade_global = 300
-	get_tree().change_scene_to_file("res://troca_personagem.tscn")
+	get_tree().change_scene_to_file("res://Menus/troca_personagem.tscn")
 
 
 func _on_difícil_pressed() -> void:
 	Global.velocidade_global = 600
-	get_tree().change_scene_to_file("res://troca_personagem.tscn")
+	get_tree().change_scene_to_file("res://Menus/troca_personagem.tscn")
 
 
 func _on_sair_pressed() -> void:
