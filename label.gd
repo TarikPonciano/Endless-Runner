@@ -2,4 +2,5 @@ extends Label
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	text = str("Pontuação: ",Global.pontuacao)
+	text = str(Global.pontuacao)
+	

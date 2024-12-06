@@ -11,20 +11,15 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_fácil_pressed() -> void:
-	Global.velocidade_global = 200
+func _on_foxy_pressed() -> void:
+	Global.personagem_escolhido = 1
 	get_tree().change_scene_to_file("res://main.tscn")
 
 
-func _on_médio_pressed() -> void:
-	Global.velocidade_global = 300
+func _on_bunny_pressed() -> void:
+	Global.personagem_escolhido = 2
 	get_tree().change_scene_to_file("res://main.tscn")
 
 
-func _on_difícil_pressed() -> void:
-	Global.velocidade_global = 600
-	get_tree().change_scene_to_file("res://main.tscn")
-
-
-func _on_sair_pressed() -> void:
-	get_tree().quit()
+func _on_voltar_pressed() -> void:
+	get_tree().change_scene_to_file("res://menu_inicial.tscn")

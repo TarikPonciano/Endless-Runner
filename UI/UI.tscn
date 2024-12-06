@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://wmdba7bvov40"]
+
+[ext_resource type="FontFile" uid="uid://csd8h5ugta7bj" path="res://SuperPixel-m2L8j.ttf" id="1_ow4ew"]
+[ext_resource type="Script" path="res://label.gd" id="2_rpt0f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_28qah"]
+font = ExtResource("1_ow4ew")
+font_size = 48
+
+[sub_resource type="SystemFont" id="SystemFont_sbrmb"]
+font_names = PackedStringArray("Futura")
+
+[sub_resource type="LabelSettings" id="LabelSettings_xp0l8"]
+font = SubResource("SystemFont_sbrmb")
+font_size = 48
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 312.0
+offset_right = 739.0
+offset_bottom = 67.0
+text = "Pontuação: "
+label_settings = SubResource("LabelSettings_28qah")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 736.0
+offset_top = -8.0
+offset_right = 1163.0
+offset_bottom = 59.0
+text = "Teste"
+label_settings = SubResource("LabelSettings_xp0l8")
+script = ExtResource("2_rpt0f")

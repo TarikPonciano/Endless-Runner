@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://uj4jlg6xskgq"]
+[gd_scene load_steps=5 format=3 uid="uid://uj4jlg6xskgq"]
 
 [ext_resource type="FontFile" uid="uid://csd8h5ugta7bj" path="res://SuperPixel-m2L8j.ttf" id="1_mjkpo"]
+[ext_resource type="Script" path="res://Menus/troca_personagem.gd" id="1_rk1j3"]
 
 [sub_resource type="Theme" id="Theme_rk3o6"]
 default_font = ExtResource("1_mjkpo")
@@ -12,6 +13,7 @@ Label/styles/normal = null
 bg_color = Color(0.6, 0.282353, 0.0980392, 1)
 
 [node name="troca_personagem" type="Node2D"]
+script = ExtResource("1_rk1j3")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1152.0
@@ -79,3 +81,7 @@ offset_bottom = 241.0
 theme_override_fonts/font = ExtResource("1_mjkpo")
 theme_override_font_sizes/font_size = 32
 text = "Escolha seu personagem"
+
+[connection signal="pressed" from="Panel/Foxy" to="." method="_on_foxy_pressed"]
+[connection signal="pressed" from="Panel/Bunny" to="." method="_on_bunny_pressed"]
+[connection signal="pressed" from="Panel/Voltar" to="." method="_on_voltar_pressed"]
