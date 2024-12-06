@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://uj4jlg6xskgq"]
+
+[ext_resource type="FontFile" uid="uid://csd8h5ugta7bj" path="res://SuperPixel-m2L8j.ttf" id="1_mjkpo"]
+
+[sub_resource type="Theme" id="Theme_rk3o6"]
+default_font = ExtResource("1_mjkpo")
+default_font_size = 64
+Button/styles/normal = null
+Label/styles/normal = null
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ge3yk"]
+bg_color = Color(0.6, 0.282353, 0.0980392, 1)
+
+[node name="troca_personagem" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme = SubResource("Theme_rk3o6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ge3yk")
+metadata/_edit_use_anchors_ = true
+
+[node name="Foxy" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.152778
+anchor_top = 0.0617284
+anchor_right = 0.152778
+anchor_bottom = 0.0617284
+offset_left = 32.0
+offset_top = 216.0
+offset_right = 336.0
+offset_bottom = 344.0
+text = "Foxy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Bunny" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.15191
+anchor_top = 0.0617284
+anchor_right = -0.15191
+anchor_bottom = 0.0617284
+offset_left = 815.0
+offset_top = 216.0
+offset_right = 1119.0
+offset_bottom = 344.0
+text = "Bunny"
+metadata/_edit_use_anchors_ = true
+
+[node name="Voltar" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 448.0
+offset_right = 731.0
+offset_bottom = 576.0
+text = "Voltar
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -356.5
+offset_top = 39.0
+offset_right = 356.5
+offset_bottom = 129.0
+grow_horizontal = 2
+text = "ENDLESS RUNNER"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel"]
+offset_left = 296.0
+offset_top = 176.0
+offset_right = 864.0
+offset_bottom = 241.0
+theme_override_fonts/font = ExtResource("1_mjkpo")
+theme_override_font_sizes/font_size = 32
+text = "Escolha seu personagem"

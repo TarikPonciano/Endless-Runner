@@ -79,6 +79,7 @@ offset_right = 356.5
 offset_bottom = 129.0
 grow_horizontal = 2
 text = "ENDLESS RUNNER"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Panel/Fácil" to="." method="_on_fácil_pressed"]
 [connection signal="pressed" from="Panel/Médio" to="." method="_on_médio_pressed"]
