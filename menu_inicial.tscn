@@ -1,12 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://cbsr7tg0hgor6"]
 
 [ext_resource type="Script" path="res://menu_inicial.gd" id="1_lqbyo"]
-
-[sub_resource type="SystemFont" id="SystemFont_hrakx"]
-font_names = PackedStringArray("Comic Sans MS")
+[ext_resource type="FontFile" uid="uid://csd8h5ugta7bj" path="res://SuperPixel-m2L8j.ttf" id="2_u3d7x"]
 
 [sub_resource type="Theme" id="Theme_intw5"]
-default_font = SubResource("SystemFont_hrakx")
+default_font = ExtResource("2_u3d7x")
 default_font_size = 64
 Button/styles/normal = null
 Label/styles/normal = null
@@ -22,6 +20,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 theme = SubResource("Theme_intw5")
 theme_override_styles/panel = SubResource("StyleBoxFlat_mkvji")
+metadata/_edit_use_anchors_ = true
 
 [node name="Fácil" type="Button" parent="Panel"]
 layout_mode = 0
@@ -31,6 +30,7 @@ offset_right = 336.0
 offset_bottom = 344.0
 text = "Fácil
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Médio" type="Button" parent="Panel"]
 layout_mode = 1
@@ -46,6 +46,7 @@ offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Médio"
+metadata/_edit_use_anchors_ = true
 
 [node name="Difícil" type="Button" parent="Panel"]
 layout_mode = 0
@@ -55,6 +56,7 @@ offset_right = 1119.0
 offset_bottom = 344.0
 text = "Difícil
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Sair" type="Button" parent="Panel"]
 layout_mode = 0
@@ -64,13 +66,18 @@ offset_right = 731.0
 offset_bottom = 576.0
 text = "SAIR
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 280.0
-offset_top = 40.0
-offset_right = 870.0
-offset_bottom = 130.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -356.5
+offset_top = 39.0
+offset_right = 356.5
+offset_bottom = 129.0
+grow_horizontal = 2
 text = "ENDLESS RUNNER"
 
 [connection signal="pressed" from="Panel/Fácil" to="." method="_on_fácil_pressed"]

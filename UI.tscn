@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://wmdba7bvov40"]
+[gd_scene load_steps=4 format=3 uid="uid://wmdba7bvov40"]
 
 [ext_resource type="Script" path="res://label.gd" id="1_t72h2"]
+[ext_resource type="FontFile" uid="uid://csd8h5ugta7bj" path="res://SuperPixel-m2L8j.ttf" id="1_wfwhd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_28qah"]
+font = ExtResource("1_wfwhd")
 font_size = 48
 
 [node name="CanvasLayer" type="CanvasLayer"]
