@@ -1,22 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://cejxhp7iy6hvv"]
 
 [ext_resource type="Script" path="res://fases.gd" id="1_70rtp"]
-[ext_resource type="PackedScene" uid="uid://dxmf2t1xjo3nf" path="res://Objetos/Foxy/player.tscn" id="2_er4s8"]
+[ext_resource type="Script" path="res://main.gd" id="1_dap88"]
 [ext_resource type="PackedScene" uid="uid://cn7fptymeyys4" path="res://BG/Jungle/jungle_bg2.tscn" id="3_8hohk"]
 [ext_resource type="PackedScene" uid="uid://mkqkld267lih" path="res://Fases/fase1.tscn" id="3_nvg7v"]
 [ext_resource type="PackedScene" uid="uid://wmdba7bvov40" path="res://UI/UI.tscn" id="5_quok8"]
 [ext_resource type="PackedScene" uid="uid://k43ioao2d10k" path="res://Objetos/Cameraman/cameraman.tscn" id="6_ie881"]
 
 [node name="Main" type="Node2D"]
-metadata/_edit_horizontal_guides_ = [656.0, 656.0]
+script = ExtResource("1_dap88")
+metadata/_edit_horizontal_guides_ = [656.0, 656.0, 480.0]
+metadata/_edit_vertical_guides_ = [128.0]
 
 [node name="Fases" type="Node2D" parent="."]
 script = ExtResource("1_70rtp")
 
 [node name="Fase1" parent="Fases" instance=ExtResource("3_nvg7v")]
-
-[node name="Player" parent="." instance=ExtResource("2_er4s8")]
-position = Vector2(176, 568)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("3_8hohk")]
 
@@ -29,4 +28,4 @@ autostart = true
 [node name="Cameraman" parent="." instance=ExtResource("6_ie881")]
 position = Vector2(576, 320)
 
-[connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

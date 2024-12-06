@@ -71,9 +71,3 @@ func _physics_process(delta: float) -> void:
 	
 	
 	move_and_slide()
-
-
-func _on_timer_timeout() -> void:
-	var novo_score = round(position.x/5)
-	if  novo_score > Global.pontuacao:
-		Global.pontuacao = novo_score # Replace with function body.
