@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv8lb31donb00"]
+
+[ext_resource type="Script" path="res://panel.gd" id="1_15woo"]
+[ext_resource type="Script" path="res://label_2.gd" id="2_bf0x6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oefhq"]
+font_size = 56
+
+[sub_resource type="SystemFont" id="SystemFont_7mr2i"]
+
+[node name="Panel" type="Panel"]
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_15woo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 152.0
+offset_right = 729.0
+offset_bottom = 229.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_oefhq")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 376.0
+offset_right = 768.0
+offset_bottom = 536.0
+theme_override_fonts/font = SubResource("SystemFont_7mr2i")
+theme_override_font_sizes/font_size = 48
+text = "Voltar ao Menu"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 272.0
+offset_right = 462.0
+offset_bottom = 317.0
+theme_override_font_sizes/font_size = 32
+text = "Pontuação:"
+script = ExtResource("2_bf0x6")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

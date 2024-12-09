@@ -67,7 +67,9 @@ func _physics_process(delta: float) -> void:
 			velocity.y = 0
 			$AnimatedSprite2D.play("Death")
 			await $AnimatedSprite2D.animation_finished
+			Global.morreu = true
 			queue_free()
+			
 		
 	
 	

@@ -15,6 +15,10 @@ func _ready() -> void:
 		
 	jogador.position = Vector2(128,480)
 	add_child(jogador)
+	
+func _process(delta: float) -> void:
+	if (Global.morreu == true):
+		get_tree().change_scene_to_file("res://Game_over.tscn")
 
 
 func _on_timer_timeout() -> void:

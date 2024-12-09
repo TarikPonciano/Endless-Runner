@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://wmdba7bvov40"]
+[gd_scene load_steps=9 format=3 uid="uid://wmdba7bvov40"]
 
 [ext_resource type="FontFile" uid="uid://csd8h5ugta7bj" path="res://SuperPixel-m2L8j.ttf" id="1_ow4ew"]
 [ext_resource type="Script" path="res://label.gd" id="2_rpt0f"]
+[ext_resource type="Script" path="res://UI/label_4.gd" id="3_4qen4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_28qah"]
 font = ExtResource("1_ow4ew")
@@ -13,6 +14,14 @@ font_names = PackedStringArray("Futura")
 [sub_resource type="LabelSettings" id="LabelSettings_xp0l8"]
 font = SubResource("SystemFont_sbrmb")
 font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_66c36"]
+font = ExtResource("1_ow4ew")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_kdlwx"]
+font = SubResource("SystemFont_sbrmb")
+font_size = 24
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -31,3 +40,20 @@ offset_bottom = 59.0
 text = "Teste"
 label_settings = SubResource("LabelSettings_xp0l8")
 script = ExtResource("2_rpt0f")
+
+[node name="HiScore" type="Label" parent="."]
+offset_left = 400.0
+offset_top = 64.0
+offset_right = 827.0
+offset_bottom = 131.0
+text = "High SCore: "
+label_settings = SubResource("LabelSettings_66c36")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 609.0
+offset_top = 60.0
+offset_right = 1036.0
+offset_bottom = 127.0
+text = "Teste"
+label_settings = SubResource("LabelSettings_kdlwx")
+script = ExtResource("3_4qen4")
