@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://11wdbewaumu2"]
+
+[ext_resource type="Script" path="res://Objetos/Gema/gema.gd" id="1_5xjs3"]
+[ext_resource type="Texture2D" uid="uid://b7wai2q0r4q5q" path="res://Spritesheets/spritesheet-gem.png" id="2_je4gx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i265r"]
+radius = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5auhd"]
+atlas = ExtResource("2_je4gx")
+region = Rect2(0, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo7ib"]
+atlas = ExtResource("2_je4gx")
+region = Rect2(15, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdgcr"]
+atlas = ExtResource("2_je4gx")
+region = Rect2(30, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evkdt"]
+atlas = ExtResource("2_je4gx")
+region = Rect2(45, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sp48k"]
+atlas = ExtResource("2_je4gx")
+region = Rect2(60, 0, 15, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_woeuv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5auhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo7ib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdgcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evkdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sp48k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_umhkq"]
+radius = 12.6491
+
+[node name="Gema" type="CharacterBody2D"]
+script = ExtResource("1_5xjs3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_i265r")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_woeuv")
+autoplay = "default"
+
+[node name="Coletar" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coletar"]
+shape = SubResource("CircleShape2D_umhkq")
+
+[connection signal="body_entered" from="Coletar" to="." method="_on_coletar_body_entered"]

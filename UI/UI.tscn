@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://wmdba7bvov40"]
+[gd_scene load_steps=12 format=3 uid="uid://wmdba7bvov40"]
 
 [ext_resource type="FontFile" uid="uid://csd8h5ugta7bj" path="res://SuperPixel-m2L8j.ttf" id="1_ow4ew"]
 [ext_resource type="Script" path="res://label.gd" id="2_rpt0f"]
 [ext_resource type="Script" path="res://UI/label_4.gd" id="3_4qen4"]
+[ext_resource type="Texture2D" uid="uid://24vnbahkc27a" path="res://Spritesheets/gem-1.png" id="4_3y8vx"]
+[ext_resource type="Script" path="res://Menus/label_3.gd" id="5_fb4x4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_28qah"]
 font = ExtResource("1_ow4ew")
@@ -22,6 +24,8 @@ font_size = 24
 [sub_resource type="LabelSettings" id="LabelSettings_kdlwx"]
 font = SubResource("SystemFont_sbrmb")
 font_size = 24
+
+[sub_resource type="SystemFont" id="SystemFont_d768q"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -57,3 +61,21 @@ offset_bottom = 127.0
 text = "Teste"
 label_settings = SubResource("LabelSettings_kdlwx")
 script = ExtResource("3_4qen4")
+
+[node name="Gem-1" type="Sprite2D" parent="."]
+position = Vector2(1000, 72)
+scale = Vector2(3, 3)
+texture = ExtResource("4_3y8vx")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1024.0
+offset_top = 24.0
+offset_right = 1136.0
+offset_bottom = 112.0
+theme_override_fonts/font = SubResource("SystemFont_d768q")
+theme_override_font_sizes/font_size = 36
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_fb4x4")

@@ -2,6 +2,8 @@ extends Node
 
 var dados = {
 	"maior_pontuacao": Global.maior_pontuacao,
+	"gemas": Global.gemas,
+	"bunny_habilitada": Global.bunny_habilitada,
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -23,6 +25,8 @@ func carregar_dados():
 	
 func salvar_dados():
 	dados["maior_pontuacao"] = Global.maior_pontuacao
+	dados["gemas"] = Global.gemas
+	dados["bunny_habilitada"] = Global.bunny_habilitada
 	
 	
 	var file = FileAccess.open("user://dados.json", FileAccess.WRITE)  # Caminho para o arquivo JSON
